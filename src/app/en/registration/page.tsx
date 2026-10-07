@@ -61,6 +61,17 @@ const BONUS_OPTIONS = [
   },
 ];
 
+const COUNTRIES = [
+  { code: "MY", label: "Malaysia" },
+  { code: "SG", label: "Singapore" },
+  { code: "ID", label: "Indonesia" },
+  { code: "TH", label: "Thailand" },
+  { code: "PH", label: "Philippines" },
+  { code: "VN", label: "Vietnam" },
+  { code: "MM", label: "Myanmar" },
+  { code: "BN", label: "Brunei" },
+];
+
 const REG_TABS = [
   { value: "email", label: "By e-mail" },
   { value: "phone", label: "By phone" },
@@ -83,7 +94,7 @@ function RegistrationForm() {
   const [password, setPassword] = useState("");
   const [promo, setPromo] = useState("");
   const [currency, setCurrency] = useState(initialCurrency);
-  const [country, setCountry] = useState("Malaysia");
+  const [country, setCountry] = useState("MY");
   const [showPwd, setShowPwd] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -177,17 +188,21 @@ function RegistrationForm() {
                     <div className={styles.selectWithFlag}>
                       <span className={styles.flagBadge}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="https://flagcdn.com/20x15/my.png" width="20" height="15" alt="Malaysia" />
+                        <img
+                          src={`https://flagcdn.com/20x15/${country.toLowerCase()}.png`}
+                          width="20"
+                          height="15"
+                          alt={country}
+                        />
                       </span>
                       <select
                         className={styles.floatSelectFlag}
                         value={country}
                         onChange={e => setCountry(e.target.value)}
                       >
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Thailand">Thailand</option>
+                        {COUNTRIES.map(c => (
+                          <option key={c.code} value={c.code}>{c.label}</option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -276,9 +291,10 @@ function RegistrationForm() {
                   <div className={styles.floatField}>
                     <span className={styles.floatLabel}>Select country</span>
                     <select className={styles.floatSelect} value={country} onChange={e => setCountry(e.target.value)}>
-                      <option value="Malaysia">Malaysia (+60)</option>
-                      <option value="Singapore">Singapore (+65)</option>
-                      <option value="Indonesia">Indonesia (+62)</option>
+                      <option value="MY">Malaysia (+60)</option>
+                      <option value="SG">Singapore (+65)</option>
+                      <option value="ID">Indonesia (+62)</option>
+                      <option value="TH">Thailand (+66)</option>
                     </select>
                   </div>
                   <div className={styles.floatField}>
