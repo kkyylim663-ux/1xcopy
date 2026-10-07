@@ -66,7 +66,14 @@ export default function GameCard({
           {rtp && <span className={styles.rtp}>RTP {rtp}</span>}
         </div>
 
-        <p className={styles.name}>{name}</p>
+        <div className={styles.nameRow}>
+          {provider && (
+            <span className={styles.providerDot} title={provider}>
+              {provider.slice(0, 2)}
+            </span>
+          )}
+          <p className={styles.name}>{name}</p>
+        </div>
       </Link>
     </li>
   );
