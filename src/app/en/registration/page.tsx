@@ -176,16 +176,8 @@ function RegistrationForm() {
                     <span className={styles.floatLabel}>Select country</span>
                     <div className={styles.selectWithFlag}>
                       <span className={styles.flagBadge}>
-                        <svg viewBox="0 0 20 14" width="20" height="14">
-                          <rect width="20" height="14" fill="#cc0001"/>
-                          <rect width="20" height="4.67" fill="#cc0001"/>
-                          <rect y="4.67" width="20" height="4.67" fill="#fff"/>
-                          <rect y="9.33" width="20" height="4.67" fill="#006847"/>
-                          <rect width="10" height="14" fill="#cc0001"/>
-                          <polygon points="0,0 6,7 0,14" fill="#ffcd00"/>
-                          <path d="M4 4.5 A2.5 2.5 0 1 1 4 9.5 A2 2 0 1 0 4 4.5" fill="#ffcd00"/>
-                          <polygon points="5.5,3.5 6,5 7.5,5 6.2,6 6.7,7.5 5.5,6.6 4.3,7.5 4.8,6 3.5,5 5,5" fill="#ffcd00"/>
-                        </svg>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="https://flagcdn.com/20x15/my.png" width="20" height="15" alt="Malaysia" />
                       </span>
                       <select
                         className={styles.floatSelectFlag}
