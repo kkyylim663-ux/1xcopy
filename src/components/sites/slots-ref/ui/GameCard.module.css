@@ -1,0 +1,144 @@
+/* GameCard — casino-game-card--orientation-vertical */
+
+.item { list-style: none; }
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--color-bg-card);
+}
+
+/* Thumbnail placeholder */
+.thumb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  transition: transform var(--transition-medium);
+}
+
+.thumbLabel {
+  font-size: var(--fz-xs, 11px);
+  font-weight: var(--fw-medium, 500);
+  color: rgba(255,255,255,0.7);
+  word-break: break-word;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Hover overlay — appears on hover */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  border-radius: var(--radius-md, 8px);
+}
+
+.playBtn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transform: scale(0.85);
+  transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.providerLabel {
+  font-size: var(--fz-xs, 11px);
+  color: rgba(255,255,255,0.8);
+  font-weight: var(--fw-medium, 500);
+}
+
+/* Hover state */
+.link:hover .overlay,
+.link:focus-visible .overlay {
+  opacity: 1;
+}
+
+.link:hover .playBtn,
+.link:focus-visible .playBtn {
+  transform: scale(1);
+  background: var(--color-accent-hover);
+}
+
+.link:hover .thumb,
+.link:focus-visible .thumb {
+  transform: scale(1.05);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 10px;
+  font-weight: var(--fw-bold, 700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.badge--new {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.badge--hot {
+  background: hsl(var(--bad-0-bg, 359,100%,67%));
+  color: #fff;
+}
+
+.badge--jackpot {
+  background: hsl(58,85%,60%);
+  color: #1a1a00;
+}
+
+/* RTP */
+.rtp {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.5);
+  padding: 2px 5px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* Name */
+.name {
+  margin-top: 6px;
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color var(--transition-base);
+}
+
+.link:hover .name {
+  color: var(--color-text-primary);
+}

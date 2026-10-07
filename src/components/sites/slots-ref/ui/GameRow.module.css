@@ -1,0 +1,104 @@
+/* GameRow — horizontal scrollable game section */
+.section {
+  margin-bottom: 32px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 0 2px;
+}
+
+.title {
+  font-size: var(--fz-lg, 16px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 16px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.viewAll {
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-primary-hover);
+  font-weight: var(--fw-medium, 500);
+  transition: color var(--transition-base);
+  white-space: nowrap;
+}
+
+.viewAll:hover {
+  color: var(--color-text-primary);
+}
+
+.rowWrapper {
+  position: relative;
+}
+
+.track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 2px 8px;
+}
+
+.track::-webkit-scrollbar { display: none; }
+
+.slide {
+  flex-shrink: 0;
+  width: 140px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 32px;
+  height: 48px;
+  background: hsl(var(--primary--40-bg));
+  border: 1px solid var(--color-sep);
+  color: var(--color-text-primary);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-base), opacity var(--transition-base);
+  opacity: 0.8;
+}
+
+.arrow:hover {
+  background: hsl(var(--primary--30-bg));
+  opacity: 1;
+}
+
+.arrowLeft {
+  left: 0;
+  border-radius: var(--radius-sm, 4px) 0 0 var(--radius-sm, 4px);
+}
+
+.arrowRight {
+  right: 0;
+  border-radius: 0 var(--radius-sm, 4px) var(--radius-sm, 4px) 0;
+}
+
+@media (max-width: 600px) {
+  .slide { width: 110px; }
+  .arrow { display: none; }
+}

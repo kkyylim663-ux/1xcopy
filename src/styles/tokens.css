@@ -1,0 +1,100 @@
+/* ============================================================
+   SLOTSHUB Design Tokens — sourced from 1xbet CSS analysis
+   HSL format: Hsl(var(--xxx)) in components
+   ============================================================ */
+
+:root {
+  /* --- Core HSL palette (raw H,S,L values) --- */
+  /* Primary blue family */
+  --primary--85-bg: 205,82%,11%;   /* darkest nav/header bg */
+  --primary--60-bg: 210,57%,17%;
+  --primary--55-bg: 209,56%,20%;
+  --primary--50-bg: 210,57%,22%;
+  --primary--40-bg: 210,57%,26%;   /* header active */
+  --primary--30-bg: 210,57%,31%;
+  --primary-0-bg:   208,62%,40%;   /* primary buttons */
+  --primary-70-bg:  208,93%,55%;   /* highlights */
+  --primary-100-bg: 0,0%,100%;     /* white */
+
+  /* Dark family (page backgrounds) */
+  --dark--55-bg: 210,45%,8%;       /* page bg */
+  --dark--40-bg: 207,21%,10%;      /* card bg */
+  --dark-0-bg:   213,13%,17%;      /* section bg */
+  --dark-15-bg:  215,17%,30%;      /* border */
+
+  /* Gray family */
+  --gray--100-bg: 0,0%,0%;
+  --gray--80-bg:  210,29%,18%;     /* subtle bg */
+  --gray--70-bg:  210,29%,27%;
+  --gray--60-bg:  210,29%,36%;
+  --gray--20-bg:  208,22%,69%;     /* muted text */
+  --gray-0-bg:    209,31%,87%;     /* light text */
+
+  /* Accent green */
+  --accent-0-bg:  82,57%,43%;      /* default accent */
+  --accent-15-bg: 82,56%,50%;      /* hover accent */
+  --accent-20-bg: 82,65%,54%;      /* active */
+
+  /* Feedback */
+  --bad-0-bg:  359,100%,67%;       /* error/red */
+  --good-0-bg: 82,56%,50%;         /* success/green */
+
+  /* --- Semantic aliases (theme: primary--40 = the site's default) --- */
+  --color-bg-page:        hsl(var(--dark--55-bg));
+  --color-bg-header:      hsl(var(--primary--40-bg));
+  --color-bg-subheader:   hsl(var(--primary--55-bg));
+  --color-bg-card:        hsl(var(--dark--40-bg));
+  --color-bg-section:     hsl(var(--dark-0-bg));
+  --color-bg-sidebar:     hsl(var(--dark--40-bg));
+  --color-bg-input:       hsl(var(--primary--60-bg));
+  --color-bg-badge:       hsl(var(--primary-0-bg));
+
+  --color-text-primary:   hsl(0,0%,100%);
+  --color-text-secondary: hsl(var(--gray--20-bg));
+  --color-text-muted:     hsl(var(--gray--60-bg));
+  --color-text-accent:    hsl(var(--accent-15-bg));
+
+  --color-accent:         hsl(var(--accent-0-bg));
+  --color-accent-hover:   hsl(var(--accent-15-bg));
+  --color-primary:        hsl(var(--primary-0-bg));
+  --color-primary-hover:  hsl(var(--primary-70-bg));
+  --color-danger:         hsl(var(--bad-0-bg));
+
+  --color-border:         hsl(var(--dark-15-bg));
+  --color-sep:            hsl(var(--primary--30-bg));
+
+  /* --- Spacing / sizing --- */
+  --gutter:        0.5rem;       /* 8px base */
+  --gap:           8px;
+  --border-radius: 8px;
+  --radius-sm:     4px;
+  --radius-md:     8px;
+  --radius-lg:     12px;
+
+  --header-top-height:    56px;
+  --header-nav-height:    40px;
+  --header-height:        96px;
+  --catbar-height:        52px;
+  --subnav-height:        44px;
+  --sidebar-width:        220px;
+  --container-max:        1700px;
+  --container-pad:        16px;
+
+  /* --- Typography --- */
+  --font-family: var(--font-inter, Inter, "Helvetica Neue", Arial, sans-serif);
+  --fz-xs:  11px;
+  --fz-sm:  12px;
+  --fz-md:  14px;
+  --fz-lg:  16px;
+  --fz-xl:  20px;
+  --fz-2xl: 24px;
+
+  --fw-normal:  400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+
+  /* --- Transitions (from animation analysis) --- */
+  --transition-fast:    0.15s ease;
+  --transition-base:    0.2s ease;
+  --transition-medium:  0.3s ease;
+}

@@ -1,0 +1,290 @@
+.page {
+  min-height: calc(100vh - var(--header-height, 96px));
+  background: rgb(22, 52, 80);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 700px;
+}
+
+.formBox {
+  background: rgb(29, 66, 104);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* 奖金选择 */
+.bonusRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.bonusOpt {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: border-color 0.1s, background-color 0.1s;
+  background: rgba(255,255,255,0.04);
+}
+
+.bonusOpt:hover { border-color: rgba(255,255,255,0.3); }
+
+.bonusOptActive {
+  border-color: rgb(126,172,47);
+  background: rgba(126,172,47,0.12);
+}
+
+.bonusOpt strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bonusOpt span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+}
+
+.hiddenRadio { display: none; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.1s, border-color 0.1s;
+  margin-bottom: -1px;
+}
+
+.tab:hover { color: rgba(255,255,255,0.8); }
+
+.tabActive {
+  color: #fff;
+  border-bottom-color: rgb(126,172,47);
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  height: 38px;
+  padding: 0 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus { border-color: rgb(61,165,255); }
+.input::placeholder { color: rgba(255,255,255,0.3); }
+
+.pwdRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  position: relative;
+}
+
+.pwdRow .input { flex: 1; padding-right: 36px; }
+
+.showPwd {
+  position: absolute;
+  right: 88px;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.generatePwd {
+  flex-shrink: 0;
+  height: 38px;
+  padding: 0 12px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  white-space: nowrap;
+}
+
+.generatePwd:hover { background: rgba(255,255,255,0.18); }
+
+.phoneRow {
+  display: flex;
+}
+
+.dialCode {
+  height: 38px;
+  padding: 0 12px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.inputPhone {
+  border-radius: 0 6px 6px 0;
+  flex: 1;
+}
+
+.oneClick {
+  padding: 16px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+}
+
+.oneClick p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.socialBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socialBtn {
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.socialBtn:hover { opacity: 0.85; }
+.socialGoogle { background: #fff; color: #333; }
+.socialTelegram { background: rgb(0,136,204); color: #fff; }
+.socialFacebook { background: rgb(24,119,242); color: #fff; }
+
+.error {
+  padding: 10px 14px;
+  background: rgba(220,50,50,0.15);
+  border: 1px solid rgba(220,50,50,0.4);
+  border-radius: 6px;
+  color: rgb(255,100,100);
+  font-size: 13px;
+}
+
+.submitBtn {
+  height: 44px;
+  background: rgb(126,172,47);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.submitBtn:hover:not(:disabled) { background: rgb(143,195,54); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.terms {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.termsLink { color: rgb(61,165,255); text-decoration: none; }
+.termsLink:hover { text-decoration: underline; }
+
+.loginPrompt {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.loginLink { color: rgb(61,165,255); text-decoration: none; }
+.loginLink:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .formBox { padding: 20px 16px; }
+  .bonusRow { grid-template-columns: 1fr; }
+  .row2 { grid-template-columns: 1fr; }
+  .showPwd { right: 6px; position: static; order: 3; }
+  .pwdRow .input { padding-right: 12px; }
+}

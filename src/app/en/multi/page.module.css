@@ -1,0 +1,221 @@
+.page {
+  max-width: var(--container-max, 1700px);
+  margin: 0 auto;
+  padding: 16px var(--container-pad, 16px);
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.pageHeader {
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-size: var(--fz-2xl, 24px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pageSubtitle {
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.matchWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pickRow {
+  display: flex;
+  gap: 6px;
+}
+
+.pickBtn {
+  flex: 1;
+  padding: 6px 4px;
+  background: hsl(var(--primary--50-bg, 210,57%,22%));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  color: var(--color-text-secondary);
+  font-size: var(--fz-xs, 11px);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.pickBtn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.pickBtnActive {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Bet Slip */
+.slip {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  padding: 16px;
+  position: sticky;
+  top: 80px;
+}
+
+.slipTitle {
+  font-size: var(--fz-lg, 16px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.slipEmpty {
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.slipList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.slipItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: hsl(var(--primary--50-bg, 210,57%,22%));
+  border-radius: var(--radius-sm, 4px);
+}
+
+.slipTeams {
+  flex: 1;
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-primary);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slipOdd {
+  font-size: var(--fz-sm, 12px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.slipRemove {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 2px;
+  font-size: var(--fz-xs, 11px);
+  flex-shrink: 0;
+}
+
+.slipRemove:hover {
+  color: var(--color-danger);
+}
+
+.slipSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slipRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-text-secondary);
+}
+
+.stakeRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stakeLabel {
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-muted);
+}
+
+.stakeInput {
+  width: 100%;
+  padding: 8px;
+  background: hsl(var(--primary--60-bg, 210,57%,17%));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  color: var(--color-text-primary);
+  font-size: var(--fz-md, 14px);
+}
+
+.stakeInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.winAmount {
+  color: var(--color-accent);
+}
+
+.placeBetBtn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: var(--color-accent);
+  border-radius: var(--radius-md, 8px);
+  color: #fff;
+  font-weight: var(--fw-bold, 700);
+  font-size: var(--fz-md, 14px);
+  text-decoration: none;
+  transition: background-color var(--transition-base);
+}
+
+.placeBetBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  .slip { width: 100%; position: static; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

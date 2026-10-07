@@ -1,0 +1,178 @@
+.page {
+  min-height: calc(100vh - var(--header-height, 96px));
+  background: rgb(22, 52, 80);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.wrap { width: 100%; max-width: 420px; }
+
+.formBox {
+  background: rgb(29, 66, 104);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.1s, border-color 0.1s;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+
+.tab:hover { color: rgba(255,255,255,0.8); }
+.tabActive { color: #fff; border-bottom-color: rgb(126,172,47); }
+
+.form { display: flex; flex-direction: column; gap: 10px; }
+
+.input {
+  height: 32px;
+  padding: 0 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.input:focus { border-color: rgb(61,165,255); }
+.input::placeholder { color: rgba(255,255,255,0.3); }
+
+.phoneRow { display: flex; }
+
+.dialCode {
+  height: 32px;
+  padding: 0 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  white-space: nowrap;
+}
+
+.inputPhone { border-radius: 0 6px 6px 0; flex: 1; }
+
+.pwdWrap { position: relative; }
+.pwdWrap .input { padding-right: 36px; }
+.showPwd {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.forgotLink {
+  background: transparent;
+  border: none;
+  color: rgb(61,165,255);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.1s;
+}
+.forgotLink:hover { color: #fff; }
+
+.submitBtn {
+  height: 32px;
+  padding: 0 24px;
+  background: rgb(39,106,165);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+.submitBtn:hover:not(:disabled) { background: rgb(46,122,187); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.error {
+  padding: 8px 12px;
+  background: rgba(220,50,50,0.15);
+  border: 1px solid rgba(220,50,50,0.4);
+  border-radius: 6px;
+  color: rgb(255,100,100);
+  font-size: 12px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 16px;
+}
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.12); }
+.divider span { font-size: 11px; color: rgba(255,255,255,0.4); white-space: nowrap; }
+
+.socialRow { display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; }
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+.socialBtn:hover { opacity: 0.85; }
+.socialGoogle { background: #fff; color: #333; }
+.socialTelegram { background: rgb(0,136,204); color: #fff; }
+.socialFacebook { background: rgb(24,119,242); color: #fff; }
+
+.regPrompt { text-align: center; font-size: 13px; color: rgba(255,255,255,0.5); }
+.regLink { color: rgb(61,165,255); text-decoration: none; }
+.regLink:hover { text-decoration: underline; }

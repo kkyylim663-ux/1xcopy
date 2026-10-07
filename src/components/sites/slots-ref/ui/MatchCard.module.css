@@ -1,0 +1,128 @@
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+}
+
+/* Meta row */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.league {
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.time {
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-secondary);
+}
+
+.timeLive {
+  color: var(--color-danger);
+  font-weight: var(--fw-bold, 700);
+  animation: blink 1.5s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+/* Teams row */
+.teams {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.teamHome,
+.teamAway {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.teamAway {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.teamCrest {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: hsl(var(--primary--30-bg, 210,57%,31%));
+  flex-shrink: 0;
+}
+
+.teamName {
+  font-size: var(--fz-sm, 12px);
+  font-weight: var(--fw-medium, 500);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vs {
+  font-size: var(--fz-xs, 11px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+/* Odds row */
+.odds {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.oddBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  background: hsl(var(--primary--50-bg, 210,57%,22%));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+  text-decoration: none;
+  gap: 2px;
+}
+
+.oddBtn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.oddLabel {
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-secondary);
+}
+
+.oddValue {
+  font-size: var(--fz-sm, 12px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,76 @@
+/* casino-brand-slider */
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 0;
+}
+
+.track::-webkit-scrollbar { display: none; }
+
+.slide {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding: 8px 16px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  font-size: var(--fz-sm, 12px);
+  font-weight: var(--fw-medium, 500);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.slide:hover {
+  background: hsl(var(--primary--30-bg, 210,57%,31%));
+  color: var(--color-text-primary);
+  border-color: hsl(var(--primary-0-bg, 208,62%,40%));
+}
+
+.slide.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Arrows */
+.arrow {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+  z-index: 1;
+}
+
+.arrow:hover {
+  background: hsl(var(--primary--30-bg));
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,127 @@
+.page {
+  min-height: calc(100vh - var(--header-height, 96px));
+  background: rgb(22, 52, 80);
+  padding: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.main { flex: 1; min-width: 0; }
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.totalCount {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+
+.matchList { display: flex; flex-direction: column; gap: 4px; }
+
+.matchRow {
+  background: rgb(29, 66, 104);
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 0.1s;
+}
+.matchRow:hover { background: rgb(32, 75, 118); }
+
+.matchInfo {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.league {
+  font-size: 11px;
+  color: rgb(61,165,255);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.matchTime {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+
+.teams {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.vs {
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+}
+
+.odds {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.oddsBtn {
+  width: 56px;
+  height: 40px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  transition: background-color 0.1s;
+}
+.oddsBtn:hover { background: rgb(39,106,165); border-color: rgb(39,106,165); }
+
+.oddsLabel { font-size: 10px; color: rgba(255,255,255,0.4); }
+.oddsVal { font-size: 13px; font-weight: 700; color: #fff; }
+
+.moreBtn {
+  width: 48px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.4);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.moreBtn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .matchInfo { width: 120px; }
+  .moreBtn { display: none; }
+}

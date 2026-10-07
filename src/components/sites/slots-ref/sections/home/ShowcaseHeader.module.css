@@ -1,0 +1,270 @@
+.section {
+  background: rgb(22, 52, 80);
+  padding: 16px;
+}
+
+.inner {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── 轮播区 900×248 ── */
+.bannerWrap {
+  position: relative;
+  width: 900px;
+  min-width: 0;
+  height: 248px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 24px 32px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+
+.slideOut { opacity: 0; }
+.slideIn { opacity: 1; }
+
+.orb {
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  opacity: 0.25;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgb(126, 172, 47);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  max-width: 460px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 380px;
+  line-height: 1.4;
+}
+
+/* 箭头 */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 112px;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s, color 0.1s, border-color 0.1s;
+  z-index: 2;
+}
+
+.prev { left: 0; border-radius: 0 8px 8px 0; }
+.next { right: 0; border-radius: 8px 0 0 8px; }
+.prev:hover, .next:hover { background: rgba(0, 0, 0, 0.45); }
+
+/* 分页条 */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  z-index: 2;
+}
+
+.dot {
+  width: 24px;
+  height: 8px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: width 0.2s, background-color 0.2s;
+  padding: 0;
+}
+
+.dotActive {
+  width: 32px;
+  background: #fff;
+}
+
+/* ── 首充面板 500×248 ── */
+.depositPanel {
+  flex: 1;
+  min-width: 0;
+  height: 248px;
+  border-radius: 8px;
+  background: rgb(32, 85, 131);
+  position: relative;
+  overflow: hidden;
+}
+
+.depositBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(126,172,47,0.25), transparent 60%);
+}
+
+.depositContent {
+  position: relative;
+  z-index: 1;
+  padding: 28px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.depositTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.depositAmt {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgb(151, 231, 13);
+  margin-bottom: 4px;
+}
+
+.depositSub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+
+.depositCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  padding: 0 24px;
+  background: rgb(151, 231, 13);
+  border-radius: 50px;
+  color: rgb(22, 52, 80);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color 0.1s;
+}
+
+.depositCta:hover { background: rgb(166, 245, 30); }
+
+/* ── 3 个 CTA 块 ── */
+.ctaRow {
+  display: flex;
+  gap: 8px;
+  max-width: 1408px;
+  margin: 0 auto;
+}
+
+.ctaBlock {
+  flex: 1;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: rgb(32, 85, 131);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  overflow: hidden;
+}
+
+.ctaBlock:hover { background: rgb(39, 100, 153); }
+
+.ctaIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.ctaBlock span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ctaBlock strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ctaBlock em {
+  display: block;
+  font-size: 11px;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .bannerWrap { width: 60%; }
+}
+
+@media (max-width: 860px) {
+  .inner { flex-direction: column; }
+  .bannerWrap { width: 100%; flex-shrink: unset; }
+  .depositPanel { height: 160px; }
+  .ctaRow { flex-direction: column; }
+  .ctaBlock { height: 56px; }
+}

@@ -1,0 +1,5 @@
+_ignore/
+node_modules/
+.next/
+.env*
+*.local

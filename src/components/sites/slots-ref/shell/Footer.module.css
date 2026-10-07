@@ -1,0 +1,197 @@
+.footer {
+  background: hsl(var(--primary--60-bg, 210,57%,17%));
+  border-top: 1px solid var(--color-sep);
+  margin-top: auto;
+}
+
+.container {
+  max-width: var(--container-max, 1700px);
+  margin: 0 auto;
+  padding: 32px var(--container-pad, 16px) 24px;
+}
+
+/* ── 链接组 ── */
+.linkSection {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.linkGroup { min-width: 140px; }
+
+.groupTitle {
+  font-size: var(--fz-xs, 11px);
+  font-weight: var(--fw-bold, 700);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.groupList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footerLink {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  transition: color 0.15s;
+  text-decoration: none;
+}
+
+.footerLink:hover { color: var(--color-text-primary); }
+
+/* ── 合作伙伴滑条 ── */
+.partnersTrack {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-sep);
+}
+
+.partnersTrack::-webkit-scrollbar { display: none; }
+
+.partnerChip {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm, 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ── 客服区 ── */
+.supportRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.supportPhone { flex-shrink: 0; }
+
+.phoneLink {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.phoneLink:hover { color: rgb(61, 165, 255); }
+
+.socialRow {
+  display: flex;
+  gap: 8px;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgb(233, 238, 242);
+  border-radius: 50%;
+  color: rgb(29, 66, 104);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.socialBtn:hover {
+  background: rgb(61, 165, 255);
+  color: #fff;
+}
+
+.mobileVersionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 278px;
+  background: rgb(39, 106, 165);
+  border-radius: var(--radius-md, 8px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  flex-shrink: 0;
+}
+
+.mobileVersionBtn:hover { background: rgb(46, 122, 187); }
+
+/* ── Cookie 提示 ── */
+.cookieBar {
+  padding: 12px 0;
+  border-top: 1px solid var(--color-sep);
+  margin-bottom: 16px;
+}
+
+.cookieText {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.cookieLink {
+  color: rgb(61, 165, 255);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+.cookieLink:hover { color: #fff; }
+
+/* ── 底部 ── */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legal {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.badges { display: flex; gap: 8px; }
+
+.badge {
+  padding: 4px 8px;
+  background: hsl(var(--dark--40-bg, 207,21%,10%));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  font-size: 11px;
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .linkSection { gap: 24px; }
+  .supportRow { flex-direction: column; align-items: flex-start; }
+  .mobileVersionBtn { width: 100%; }
+  .bottom { flex-direction: column; align-items: flex-start; }
+}

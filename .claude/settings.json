@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(_ignore/**)",
+      "Grep(_ignore/**)",
+      "Glob(_ignore/**)"
+    ]
+  }
+}

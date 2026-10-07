@@ -1,0 +1,137 @@
+.page {
+  max-width: var(--container-max, 1700px);
+  margin: 0 auto;
+  padding: 16px var(--container-pad, 16px);
+}
+
+.pageHeader {
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-size: var(--fz-2xl, 24px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pageSubtitle {
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sideItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+  text-align: left;
+}
+
+.sideItem:hover {
+  background: hsl(var(--primary--40-bg, 210,57%,26%));
+}
+
+.sideItemActive {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.sideItemName {
+  font-size: var(--fz-sm, 12px);
+  font-weight: var(--fw-medium, 500);
+  color: var(--color-text-primary);
+}
+
+.sideItemSport {
+  font-size: var(--fz-xs, 11px);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.sideItemActive .sideItemSport {
+  color: rgba(255,255,255,0.7);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.tournamentCard {
+  background: hsl(var(--primary--40-bg, 210,57%,26%));
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.tournamentInfo {}
+
+.tournamentName {
+  font-size: var(--fz-xl, 20px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.tournamentMeta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-text-secondary);
+}
+
+.prize {
+  color: var(--color-accent);
+  font-weight: var(--fw-medium, 500);
+}
+
+.sectionTitle {
+  font-size: var(--fz-lg, 16px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .sideItem { width: auto; flex: 1; min-width: 100px; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

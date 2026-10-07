@@ -1,0 +1,128 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  height: 36px;
+  padding: 0 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.filterBtn:hover { background: rgba(255,255,255,0.14); color: #fff; }
+.filterActive { background: rgb(39,106,165); border-color: rgb(39,106,165); color: #fff; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgb(29, 66, 104);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cardBanner {
+  height: 140px;
+  background: linear-gradient(135deg, rgb(32,85,131) 0%, rgb(39,106,165) 100%);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+}
+
+.cardType {
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+}
+
+.cardBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 3px 10px;
+  background: rgb(126,172,47);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.cardBody { padding: 20px; }
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.cardValue {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(126,172,47);
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.cardBtn {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+  background: rgb(39,106,165);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.1s;
+}
+.cardBtn:hover { background: rgb(46,122,187); }

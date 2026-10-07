@@ -1,0 +1,183 @@
+.section {
+  padding: 16px;
+  background: rgb(22, 52, 80);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.seeAll {
+  font-size: 12px;
+  color: rgb(61, 165, 255);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+.seeAll:hover { color: #fff; }
+
+.track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 1408px;
+  margin: 0 auto 8px;
+  padding-bottom: 4px;
+}
+
+.track::-webkit-scrollbar { display: none; }
+
+/* ── 事件卡片 330×147 ── */
+.card {
+  flex-shrink: 0;
+  width: 330px;
+  height: 147px;
+  background: rgb(32, 85, 131);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sport {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.tournament {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.liveBadge {
+  flex-shrink: 0;
+  padding: 1px 5px;
+  background: rgb(220, 50, 50);
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.matchRow {
+  text-decoration: none;
+  display: block;
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teams .team:last-of-type { text-align: right; }
+
+.score {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(151, 231, 13);
+  flex-shrink: 0;
+}
+
+.vs {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.oddsRow {
+  display: flex;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.oddsBtn {
+  flex: 1;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  gap: 1px;
+  transition: background-color 0.1s;
+}
+
+.oddsBtn:hover { background: rgba(61, 165, 255, 0.25); }
+
+.oddsBtnLabel {
+  font-size: 9px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.oddsBtnValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(61, 165, 255);
+}
+
+.moreOdds {
+  width: 32px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  flex-shrink: 0;
+}
+
+.moreOdds:hover { background: rgba(255, 255, 255, 0.12); }

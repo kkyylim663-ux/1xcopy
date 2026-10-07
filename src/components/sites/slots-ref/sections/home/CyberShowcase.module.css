@@ -1,0 +1,197 @@
+.section {
+  background: rgb(18, 40, 62);
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.seeAll {
+  font-size: 12px;
+  color: rgb(61, 165, 255);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+.seeAll:hover { color: #fff; }
+
+.track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 1408px;
+  margin: 0 auto;
+}
+
+.track::-webkit-scrollbar { display: none; }
+
+/* ── 电竞卡片 330×167 ── */
+.card {
+  flex-shrink: 0;
+  width: 330px;
+  height: 167px;
+  border-radius: 8px;
+  background: rgb(25, 60, 95);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 10px;
+  position: relative;
+  transition: background-color 0.1s;
+}
+
+.card:hover { background: rgb(32, 75, 115); }
+
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 100% 0%, rgba(61,165,255,0.12), transparent 50%);
+  pointer-events: none;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sport {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgb(61, 165, 255);
+  text-transform: uppercase;
+}
+
+.tournament {
+  flex: 1;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.liveBadge {
+  padding: 1px 5px;
+  background: rgb(220, 50, 50);
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+.matchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.teamBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.teamLogo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.teamName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  max-width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score {
+  font-size: 18px;
+  font-weight: 800;
+  color: rgb(151, 231, 13);
+}
+
+.vs {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.oddsRow {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.oddsBtn {
+  flex: 1;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.oddsBtn:hover { background: rgba(61, 165, 255, 0.2); }
+
+.oddsBtn span {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.oddsBtn strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(61, 165, 255);
+}

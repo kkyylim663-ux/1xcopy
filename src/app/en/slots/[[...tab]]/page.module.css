@@ -1,0 +1,196 @@
+/* Slots page — casino-layout */
+.page {
+  max-width: var(--container-max, 1700px);
+  margin: 0 auto;
+  padding: 16px var(--container-pad, 16px);
+}
+
+/* Tab header row */
+.tabHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tabTitle {
+  font-size: var(--fz-lg, 16px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pageCount {
+  font-size: var(--fz-sm, 12px);
+  color: var(--color-text-muted);
+}
+
+/* Sections (All tab home view) */
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.allToolbar {
+  margin: 8px 0 16px;
+}
+
+.allToolbarInner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.allToolbarTitle {
+  font-size: var(--fz-lg, 16px);
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.allToolbarInner > :nth-child(2) {
+  min-width: 160px;
+  max-width: 220px;
+}
+
+.allToolbarInner > :last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Layout: sidebar + main */
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Sub-tabs (casino-aside equivalent as horizontal tabs) */
+.tabs {
+  position: sticky;
+  top: var(--header-height, 96px);
+  z-index: 20;
+  min-height: var(--catbar-height, 52px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 16px;
+  background: var(--color-bg-page);
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  padding: 8px 16px;
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  font-size: var(--fz-sm, 12px);
+  font-weight: var(--fw-medium, 500);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.tab:hover {
+  background: hsl(var(--primary--30-bg, 210,57%,31%));
+  color: var(--color-text-primary);
+  border-color: hsl(var(--primary-0-bg, 208,62%,40%));
+}
+
+.tab.tabActive {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.toolbar > :first-child {
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.toolbar > :last-child { flex: 1; min-width: 0; }
+
+/* Game grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--gap, 8px);
+  list-style: none;
+}
+
+/* Load more */
+.loadMore {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.loadMoreBtn {
+  padding: 12px 32px;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md, 8px);
+  color: var(--color-text-primary);
+  font-size: var(--fz-md, 14px);
+  font-weight: var(--fw-medium, 500);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.loadMoreBtn:hover {
+  background: hsl(var(--primary--30-bg));
+}
+
+/* Empty state */
+.empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--fz-md, 14px);
+}
+
+.clearBtn {
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  color: #fff;
+  font-size: var(--fz-sm, 12px);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar > :first-child { max-width: none; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+}

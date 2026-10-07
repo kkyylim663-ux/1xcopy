@@ -1,0 +1,144 @@
+.page {
+  min-height: calc(100vh - var(--header-height, 96px));
+  background: rgb(22, 52, 80);
+  padding: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.main { flex: 1; min-width: 0; }
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.liveCount {
+  padding: 3px 10px;
+  background: rgb(220,50,50);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.matchList { display: flex; flex-direction: column; gap: 4px; }
+
+.matchRow {
+  background: rgb(29, 66, 104);
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 0.1s;
+}
+.matchRow:hover { background: rgb(32, 75, 118); }
+
+.matchInfo {
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.sport {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-bottom: 1px;
+}
+
+.league {
+  display: block;
+  font-size: 11px;
+  color: rgb(61,165,255);
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+.minute {
+  display: block;
+  font-size: 11px;
+  color: rgb(255, 180, 0);
+  font-weight: 700;
+}
+
+.teams {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teamRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.teamName {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scoreVal {
+  font-size: 14px;
+  font-weight: 800;
+  color: rgb(151,231,13);
+  min-width: 24px;
+  text-align: right;
+}
+
+.odds {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.oddsBtn {
+  width: 54px;
+  height: 40px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  transition: background-color 0.1s;
+}
+.oddsBtn:hover { background: rgb(39,106,165); border-color: rgb(39,106,165); }
+.oddsDash { background: transparent; border-color: transparent; color: rgba(255,255,255,0.2); cursor: default; font-size: 16px; }
+
+.oddsLabel { font-size: 10px; color: rgba(255,255,255,0.4); }
+.oddsVal { font-size: 13px; font-weight: 700; color: #fff; }
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .matchInfo { width: 100px; }
+}

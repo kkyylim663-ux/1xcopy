@@ -1,0 +1,50 @@
+{
+  "base": "https://malay.1xbet.com",
+  "groups": {
+    "A": {
+      "label": "Casino (full restore)",
+      "routes": [
+        "/en/slots",
+        "/en/slots/popular",
+        "/en/slots/new",
+        "/en/slots/recommended",
+        "/en/slots/quick-play",
+        "/en/casino",
+        "/en/casino-lobby"
+      ]
+    },
+    "B": {
+      "label": "Games (shell + main sections)",
+      "routes": [
+        "/en/games",
+        "/en/tvgames",
+        "/en/othergames",
+        "/en/fishinghunting",
+        "/en/scratchcards",
+        "/en/bingo",
+        "/en/poker",
+        "/en/lotto",
+        "/en/virtualsports",
+        "/en/fast-bet"
+      ]
+    },
+    "C": {
+      "label": "Sports (shell + main sections)",
+      "routes": [
+        "/en/line",
+        "/en/live",
+        "/en/multi",
+        "/en/results",
+        "/en/statistic",
+        "/en/champs",
+        "/en/ufc"
+      ]
+    }
+  },
+  "sharedCSS": [
+    "/genfiles/site-admin/colors/21d423b56b1e281cf24b3493379983d1.css",
+    "/genfiles/site-admin/css_vars/06c9b68c4f5819c83cc220a9024bbee1.css",
+    "/sys-ui/4.0.219/Desktop/Default/client.l.css",
+    "/sys-static/shared-assets/Desktop/__shared_css_16102c.css"
+  ]
+}
